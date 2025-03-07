@@ -1,4 +1,5 @@
-﻿using System.Net.WebSockets;
+﻿using System.Globalization;
+using System.Net.WebSockets;
 using System.Numerics;
 
 public class main
@@ -151,12 +152,16 @@ public class vector
         }
         
     }
-    public void join(vector v2)
+    public void fullJoin(vector v2, int index=0)
     {
-        for (int point = 0; point < v2.getLength(); ++point)
+        for (int point = index; point < v2.getLength(); ++point)
         {
             add(v2.elements[point]);
         }
+    }
+    public void join(vector v2)
+    {
+        fullJoin(v2);
         removeDuplicates();
     }
     public vector createSubVector (int start, int end)
@@ -193,6 +198,88 @@ public class vector
         for (int point = 0; point < getLength(); ++point)
         {
             Console.Write(elements[point] + " ");
+        }
+    }
+    public int minElement(int index = 0)
+    {
+        int min = index;
+        for (int point = index+1; point < getLength(); ++point)
+        {
+            if (elements[point] < elements[min])
+            {
+                min = point;
+            }
+        }
+        return min;
+    }
+    public void selectionSort()
+    {
+        for (int point = 0; point < getLength()-1; ++point)
+        {
+            swap(point, minElement(point)); 
+        }
+    }
+    public void insertionSort()
+    {
+        for (int point = 1; point < getLength(); ++point)
+        {
+            int tempPoint = point;
+            while (tempPoint > 0 && elements[tempPoint-1] > elements[tempPoint])
+            {
+                swap(tempPoint, tempPoint-1);
+                --tempPoint;
+            }
+        }
+    }
+    public (vector left, vector right) split()
+    {
+        int half = (getLength()-1)/2;
+        vector left = createSubVector(0, half);
+        vector right = createSubVector(half+1, getLength()-1);
+        return (left, right);
+    }
+    public vector joinSort(vector v2)
+    {
+        vector sort = new vector();
+        int point_1 = 0, point_2 = 0;
+        while (point_1 < getLength() && point_2 < v2.getLength())
+        {
+            if (elements[point_1] <= v2.elements[point_2])
+            {
+                sort.add(elements[point_1]);
+                ++point_1;
+            }
+            else
+            {
+                sort.add(v2.elements[point_2]);
+                ++point_2;
+            }
+        }
+        sort.fullJoin(this, point_1);
+        sort.fullJoin(v2, point_2);
+        return sort;
+    }
+    public vector merge()
+    {
+        if (getLength() <= 1)
+        {
+            return this;
+        }
+        else
+        { 
+            (vector left, vector right) = split();
+            left = left.merge();
+            right = right.merge();
+            return left.joinSort(right);
+        }
+
+    }
+    public void mergeSort()
+    {
+        vector sort = merge();
+        for (int point = 0; point<getLength(); ++point)
+        {
+            this.elements[point] = sort.elements[point];
         }
     }
 }
