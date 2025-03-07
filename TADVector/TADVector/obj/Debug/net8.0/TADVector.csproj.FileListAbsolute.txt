@@ -1,0 +1,14 @@
+C:\Users\USUARIO\Documents\3_SEMESTRE\PROGRAMACION 2\TADVector\TADVector\obj\Debug\net8.0\TADVector.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\Documents\3_SEMESTRE\PROGRAMACION 2\TADVector\TADVector\obj\Debug\net8.0\TADVector.AssemblyInfoInputs.cache
+C:\Users\USUARIO\Documents\3_SEMESTRE\PROGRAMACION 2\TADVector\TADVector\obj\Debug\net8.0\TADVector.AssemblyInfo.cs
+C:\Users\USUARIO\Documents\3_SEMESTRE\PROGRAMACION 2\TADVector\TADVector\obj\Debug\net8.0\TADVector.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Documents\3_SEMESTRE\PROGRAMACION 2\TADVector\TADVector\bin\Debug\net8.0\TADVector.exe
+C:\Users\USUARIO\Documents\3_SEMESTRE\PROGRAMACION 2\TADVector\TADVector\bin\Debug\net8.0\TADVector.deps.json
+C:\Users\USUARIO\Documents\3_SEMESTRE\PROGRAMACION 2\TADVector\TADVector\bin\Debug\net8.0\TADVector.runtimeconfig.json
+C:\Users\USUARIO\Documents\3_SEMESTRE\PROGRAMACION 2\TADVector\TADVector\bin\Debug\net8.0\TADVector.dll
+C:\Users\USUARIO\Documents\3_SEMESTRE\PROGRAMACION 2\TADVector\TADVector\bin\Debug\net8.0\TADVector.pdb
+C:\Users\USUARIO\Documents\3_SEMESTRE\PROGRAMACION 2\TADVector\TADVector\obj\Debug\net8.0\TADVector.dll
+C:\Users\USUARIO\Documents\3_SEMESTRE\PROGRAMACION 2\TADVector\TADVector\obj\Debug\net8.0\refint\TADVector.dll
+C:\Users\USUARIO\Documents\3_SEMESTRE\PROGRAMACION 2\TADVector\TADVector\obj\Debug\net8.0\TADVector.pdb
+C:\Users\USUARIO\Documents\3_SEMESTRE\PROGRAMACION 2\TADVector\TADVector\obj\Debug\net8.0\TADVector.genruntimeconfig.cache
+C:\Users\USUARIO\Documents\3_SEMESTRE\PROGRAMACION 2\TADVector\TADVector\obj\Debug\net8.0\ref\TADVector.dll
